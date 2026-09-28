@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""Development entrypoint: run the local DCR service."""
 
-app = FastAPI()
+from dcr.app import create_app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
